@@ -1,0 +1,157 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}html{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+
+/*  Custom CSS Added Here:
+    Notes:
+      - To celebrate π, I used a modular scale of 1:π/2 for font sizes.
+        (I would've used 1:π, but the sizes weren't granular enough)
+      - Color schema was based on skyblue as a base color followed by
+        other similar shades to this color. I minimized the use of
+        bright, popping colors to make the page less distracting.
+*/
+/*
+  #00B6BD
+  #00D6DF
+*/
+
+html {
+  background-color: #75A9B5; /* Shade of gray-blue */
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  font-family: 'Merriweather', serif;
+  margin: 2vw;
+  max-width: 100%;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+#header li {
+  background-color: lightskyblue;
+  border-radius: 0.637em;
+  display: inline-block;
+  font-family: 'Roboto Slab', 'Times New Roman';
+  margin: 1em;
+  margin-left: 0;
+}
+
+#header li:last-child {
+  margin-right: 0;
+}
+
+#header a {
+  color: black;
+  display: block;
+  font-weight: bold;
+  line-height: 1.571em;
+  padding: 1em;
+  text-decoration: none;
+}
+
+#header a:hover {
+  background-color: #00D6DF;
+  border-radius: 0.637em;
+}
+
+#header a:hover span.red {
+  color: red;
+}
+
+#header a:hover span.blue {
+  color: blue;
+}
+
+#header a:hover span.yellow {
+  color: yellow;
+}
+
+#header a:hover span.green {
+  color: lightgreen;
+}
+
+section {
+  margin-top: 2.467em;
+  padding-top: 0.258em;
+}
+
+aside {
+  border-color: #00D6DF;
+  border-style: dotted;
+  border-width: 0.405em;
+  box-sizing: border-box;
+  margin-top: 1.571em;
+  padding: 1em;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Roboto Slab', 'Times New Roman';
+}
+
+h1 {
+  font-size: 3.876em;
+  font-weight: 700;
+  line-height: 1em;
+  margin: 0.637em 0;
+}
+
+h2 {
+  font-size: 1.571em;
+  font-weight: 700;
+  line-height: 1em;
+  margin: 1em 0;
+}
+
+h3 {
+  font-weight: 700;
+  line-height: 1em;
+  margin: 1em 0;
+}
+
+p {
+  line-height: 1.571em;
+}
+
+sup {
+  font-size: 0.637em;
+  vertical-align: super;
+}
+
+em {
+  font-style: italic;
+}
+
+#footer {
+  margin-top: 50vw;
+}
+
+#attributions th,
+#attributions td {
+  font-size: 0.637em;
+  line-height: 1.571em;
+  padding: 1.571em;
+}
+
+#attributions th:last-child,
+#attributions td:last-child {
+  margin-right: 0;
+}
+
+#attributions th {
+  font-family: Arial;
+  font-weight: bold;
+  padding: 0;
+}
+
+#attributions a {
+  word-break: break-word;
+}
