@@ -11,14 +11,15 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
       - Color schema was based on skyblue as a base color followed by
         other similar shades to this color. I minimized the use of
         bright, popping colors to make the page less distracting.
+    Color Scheme:
+      #00B6BD
+      #00D6DF
+      lightskyblue
+      white
+      gray
 */
-/*
-  #00B6BD
-  #00D6DF
-*/
-
 html {
-  background-color: #75A9B5; /* Shade of gray-blue */
+  background-color: #89CFF0; /* Baby Blue */
   text-rendering: optimizeLegibility;
   -webkit-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
@@ -27,54 +28,27 @@ html {
 }
 
 body {
+  box-sizing: border-box;
   font-family: 'Merriweather', serif;
-  margin: 2vw;
-  max-width: 100%;
+  min-height: 95vh;
   overflow-wrap: break-word;
+  position: relative;
+  width: 100%;
   word-wrap: break-word;
 }
 
-#header li {
-  background-color: lightskyblue;
-  border-radius: 0.637em;
-  display: inline-block;
-  font-family: 'Roboto Slab', 'Times New Roman';
-  margin: 1em;
-  margin-left: 0;
+header,
+main {
+  margin-left: 2vw;
+  max-width: 78.833em;
 }
 
-#header li:last-child {
-  margin-right: 0;
+header {
+  padding-bottom: 10em;
 }
 
-#header a {
-  color: black;
-  display: block;
-  font-weight: bold;
-  line-height: 1.571em;
-  padding: 1em;
-  text-decoration: none;
-}
-
-#header a:hover {
-  background-color: #00D6DF;
-  border-radius: 0.637em;
-}
-
-#header a:hover span.red {
-  color: red;
-}
-
-#header a:hover span.blue {
-  color: blue;
-}
-
-#header a:hover span.yellow {
-  color: yellow;
-}
-
-#header a:hover span.green {
-  color: lightgreen;
+main {
+  padding-bottom: 20em;
 }
 
 section {
@@ -121,35 +95,160 @@ p {
   line-height: 1.571em;
 }
 
+p.equation {
+  font-size: minmax(1em, 4vw);
+  overflow: auto;
+}
+
 sup {
   font-size: 0.637em;
   vertical-align: super;
+}
+
+sub {
+  font-size: 0.637em;
+  vertical-align: sub;
 }
 
 em {
   font-style: italic;
 }
 
-#footer {
-  margin-top: 50vw;
+
+/* Header Styling */
+#navigation li {
+  background-color: #00B6BD; /* Iris Blue */
+  border-radius: 0.637em;
+  font-family: 'Roboto Slab', 'Times New Roman';
+  margin: 1em;
+  margin-left: 0;
+  vertical-align: top;
 }
 
-#attributions th,
+#navigation ul > li {
+  display: inline-block;
+  float: left;
+  position: relative;
+  width: auto;
+}
+
+#navigation li:last-child {
+  margin-right: 0;
+}
+
+#navigation ul.dropdown-menu {
+  display: none;
+  opacity: 0.95;
+  position: absolute;
+  width: 100%;
+}
+
+#navigation li:hover ul.dropdown-menu {
+  display: block;
+}
+
+#navigation .dropdown-menu li {
+  display: block;
+  float: none;
+  margin: 0;
+}
+
+#navigation a {
+  color: black;
+  display: block;
+  font-weight: bold;
+  line-height: 1.571em;
+  padding: 1em;
+  text-decoration: none;
+}
+
+#navigation a:hover {
+  background-color: #00D6DF; /* Robin's Egg Blue */
+  border-radius: 0.637em;
+}
+
+#navigation a:hover span.red {
+  color: red;
+}
+
+#navigation a:hover span.blue {
+  color: blue;
+}
+
+#navigation a:hover span.yellow {
+  color: yellow;
+}
+
+#navigation a:hover span.green {
+  color: green;
+}
+
+
+/* TODO: Fix CSS for Smaller screens and Add Media Queries */
+
+
+/* Pi Game Stylings */
+#pi-game input {
+  border-color: lightgray;
+  border-radius: 0.2em;
+  border-style: solid;
+  border-width: 0.1em;
+  font-family: 'Varela Round', sans-serif;
+  font-size: 1.571em;
+  padding: 0.405em;
+  text-align: center;
+  width: 1.571em;
+}
+
+/* Hide Arrows for: Chrome, Safari, Edge, Opera  */
+#pi-game input::-webkit-outer-spin-button,
+#pi-game input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Hide Arrows for: Firefox  */
+#pi-game input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
+/* Footer Stylings */
+#footer {
+  background-color: #99FFD5;
+  bottom: 0;
+  padding-bottom: 2vw;
+  padding-top: 1vw;
+  position: absolute;
+  text-align: left;
+  width: 100%;
+}
+
+#footer h3 {
+  margin-left: 2vw;
+}
+
+#attributions {
+  margin-left: 2vw;
+  width: 50%;
+}
+
+#attributions th {
+  font-size: 0.750em;
+  font-weight: bold;
+  padding-bottom: 0.375em;
+}
+
 #attributions td {
   font-size: 0.637em;
   line-height: 1.571em;
-  padding: 1.571em;
+  margin: 1em;
+  text-align: left;
 }
 
 #attributions th:last-child,
 #attributions td:last-child {
   margin-right: 0;
-}
-
-#attributions th {
-  font-family: Arial;
-  font-weight: bold;
-  padding: 0;
 }
 
 #attributions a {
