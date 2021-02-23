@@ -1,0 +1,24 @@
+{
+  "name": "pi-site",
+  "version": "1.0.0",
+  "description": "Website containing information on pi as well as an interactive pi game written in JS.",
+  "main": "pi.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Xivius/pi-site.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Xivius/pi-site/issues"
+  },
+  "homepage": "https://github.com/Xivius/pi-site#readme",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.5",
+    "express": "^4.17.1"
+  }
+}

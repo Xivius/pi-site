@@ -1,15 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="how-to-use-pi">
   <head>
-    <title>Learn Pi the Interactive Way!</title>
+    <title>Pi Background Info</title>
     <meta charset="utf-8" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
-    <link
-      rel="stylesheet"
-      href="screen.css" />
-    <script src="pi.js"></script>
+    <link rel="stylesheet" href="/css/screen.css" />
+    <link rel="shortcut icon" href="/assets/favicon.ico" />
     <!-- Google Fonts -->
     <link
       href="https://fonts.googleapis.com/css?family=Merriweather:400,700&display=swap"
@@ -29,7 +27,7 @@
 
   <body>
     <header id="header">
-      <h1>Welcome to the π Page!</h1>
+      <h1>How to Use π</h1>
 
       <nav id="navigation">
         <ul>
@@ -64,12 +62,58 @@
     </header>
 
     <main id="content">
-      <section>
-        <h2>Looking to Book Up on Pi?</h2>
+      <section id="pi-value">
+        <h2>Approximate Value of Pi</h2>
         <h3>
-          You came to the right place!
-          It’s as easy as 1, 2, 3!
+          π ≈ 3.141592653589
         </h3>
+        <p>
+          For most purposes, only the first 4 digits after the decimal place
+          are necessary for calculations. NASA reports ever needing at most
+          15 digits after the decimal to send rockets into outer space.
+        </p>
+      </section>
+      <section id="pi-calculations">
+        <h2>Example Calculations Involving π</h2>
+        <ul id="pi-calculation-examples">
+          <li>
+            Circumference of a Circle
+            <p class="equation">
+              $$C=2\pi r$$
+            </p>
+          </li>
+          <li>
+            Area of a Circle
+            <p class="equation">
+              $$A=\pi r^2$$
+            </p>
+          </li>
+          <li>
+            Volume of a Sphere
+            <p class="equation">
+              $$V=\frac{4}{3} \pi r^3$$
+            </p>
+          </li>
+          <li>
+            Surface Area of a Sphere
+            <p class="equation">
+              $$SA=4\pi r^2$$
+            </p>
+          </li>
+          <li>
+            Trignometry (Unit Circle)
+            <figure>
+              <!-- TODO: Format CSS for these items -->
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Unit_circle_angles_color.svg/768px-Unit_circle_angles_color.svg.png" />
+              <figcaption>
+                When measuring angles, there are two forms of expressing their
+                values: degrees and radians. You may be very familiar with
+                degrees (e.g. 120°). When using radians, the critical angles of
+                the unit circle are multiples of π.
+              </figcaption>
+            </figure>
+          </li>
+        </ul>
       </section>
     </main>
 

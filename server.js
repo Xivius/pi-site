@@ -1,9 +1,33 @@
-const http = require("http");
-var static = require("node-static");
-var file = new static.Server();
-http.createServer (function (request, response) {
-  file.serve (request, response);
-  response.writeHead(200, {"Content-Type": "text/plain"});
-  response.end("Hello World!");
-}).listen(8082, "127.0.0.1");
-console.log("Server running at http://127.0.0.1:8081/");
+const cheerio = require('cheerio');
+const express = require('express');
+const http = require('http');
+const app = express();
+
+app.set('view-engine', 'ejs');
+app.use(express.static('public'));
+app.listen(8080);
+
+app.get('/', function (req, res) {
+  res.render("index");
+});
+
+app.get('/about-pi', function (req, res) {
+  res.render("about-pi");
+});
+
+app.get('/how-to-use-pi', function (req, res) {
+  res.render("how-to-use-pi");
+});
+
+app.get('/pi-test', function (req, res) {
+  http.get("https://www.piday.org/million/", function getPiData(err, data) {
+    if (err) {
+      console.error(err);
+      return;
+    }
+
+    var $ = cheerio.load(data);
+    var PI = $('#million_pi').text();
+    res.render("pi-test", {pi: PI});
+  });
+});
