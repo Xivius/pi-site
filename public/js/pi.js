@@ -1,4 +1,4 @@
-window.onload = main();
+window.onload = main;
 
 function main() {
   // MathJax Styling
@@ -8,26 +8,38 @@ function main() {
     }
   };
 
-  piTest();
-}
-
-function piTest() {
-  console.log(PI);
-  // "3.14159265358979323846264338327950288419716939937510582097494459230781" +
-  // "640628620899862803482534211706798214808651320";
   var userAnswer = document.querySelector(".user-input");
   var piDisplay = document.querySelector(".correct-digits");
+  var currentDigit = document.querySelector(".correct-digits .current");
+  var nextDigit = document.querySelector(".correct-digits .next");
+  var PI = piDisplay.dataset.pi;
   var counter = 2;
+  var blinkOn = false;
 
   userAnswer.addEventListener("input", function processInput(event) {
-    if (String(userInput) === PI[counter++]) {
-      piDisplay.innerHTML += userInput;
+    if (String(userAnswer.value) === PI[counter++]) {
+      currentDigit.innerHTML += userAnswer.value;
     } else {
-      if (counter != PI.length) {
-        alert("You Memorized " + (counter - 2) + " digits.");
+      if (counter < PI.length - 1) {
+        alert(
+          "You Memorized " + (counter - 2) + " digits.\n" +
+          "The next digit is: " + PI[counter-1]
+        );
       } else {
         alert("Congrats! You memorized all " + (PI.length - 2) + "digits");
       }
+      currentDigit.innerHTML = "3.";
+      counter = 2;
     }
+    userAnswer.value = "";
   });
+
+  setInterval(function () {
+    if (blinkOn) {
+      nextDigit.classList.add("next");
+    } else {
+      nextDigit.classList.remove("next");
+    }
+    blinkOn = !blinkOn;
+  }, 800)
 }

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" id="home">
+  <%- include('.././partials/head'); %>
+
+  <body>
+    <header id="header">
+      <h1>Welcome to the π Page!</h1>
+
+      <nav id="navigation">
+        <ul>
+          <li><a href="/">
+            Home
+          </a></li>
+          <li><a href="/about-pi">
+            π: Background Introduction</a>
+            <ul class="dropdown-menu" aria-label="submenu">
+              <li><a href="/how-to-use-pi#what">
+                <span class="red">What</span> is π?
+              </a></li>
+              <li><a href="/how-to-use-pi#why">
+                <span class="blue">Why</span> π?
+              </a></li>
+              <li><a href="/how-to-use-pi#how">
+                <span class="yellow">How</span> is π Used?
+              </a></li>
+              <li><a href="/how-to-use-pi#who">
+                <span class="green">Who</span> En&shy;coun&shy;ters π?
+              </a></li>
+            </ul>
+          </li>
+          <li><a href="/how-to-use-pi">
+            How to Use π
+          </a></li>
+          <li><a href="/pi-test">
+            π Test
+          </a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="content">
+      <section>
+        <h2>Looking to Book Up on Pi?</h2>
+        <h3>
+          You came to the right place!
+          It’s as easy as 1, 2, 3!
+        </h3>
+      </section>
+    </main>
+
+    <%- include('.././partials/footer'); %>
+  </body>
+</html>
+
+<!--
+     ‘ | &lsquo;
+     ’ | &rsquo;
+     “ | &ldquo;
+     ” | &rdquo;
+-->
