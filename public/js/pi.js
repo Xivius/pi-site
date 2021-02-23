@@ -50,4 +50,6 @@ function main() {
       blinkOn = true;
     }
   }, 500);
+
+  userAnswer.focus();
 }
