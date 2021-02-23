@@ -41,14 +41,13 @@
     <main id="content">
       <section id="pi-game">
         <h2>How Many Di&shy;gits of π Do You Know?</h2>
-        <input
-          class="user-input"
-          type="number"
-          maxlength="1"
-          min="0"
-          max="9" />
-        <p class="correct-digits" data-pi="<%= pi_value %>">
-          <span class="current">3.</span><span class="next">&nbsp;</span>
+        <p class="correct-digits" data-pi="<%= pi_value %>" tabindex="0">
+          π = <span class="current">3.</span><input
+            class="user-input"
+            type="number"
+            maxlength="1"
+            min="0"
+            max="9" />
         </p>
       </section>
     </main>

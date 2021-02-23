@@ -218,15 +218,24 @@ em {
 
 /* Pi Test CSS */
 #pi-game input {
-  border-color: lightgray;
-  border-radius: 0.2em;
+  background-color: transparent;
+  border-color: yellow;
   border-style: solid;
-  border-width: 0.1em;
-  font-family: 'Varela Round', sans-serif;
-  font-size: 1.571em;
-  padding: 0.405em;
-  text-align: center;
-  width: 1.571em;
+  border-width: thin;
+  font-family: 'Roboto Mono', 'Courier New';
+  font-size: 1em;
+  padding: 0;
+  width: 0.607em; /* 17px */
+}
+
+#pi-game input:focus {
+  caret-color: transparent;
+  outline: none;
+}
+
+/* Hide Arrows for: Firefox  */
+#pi-game input[type=number] {
+  -moz-appearance: textfield;
 }
 
 /* Hide Arrows for: Chrome, Safari, Edge, Opera  */
@@ -234,11 +243,6 @@ em {
 #pi-game input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
-}
-
-/* Hide Arrows for: Firefox  */
-#pi-game input[type=number] {
-  -moz-appearance: textfield;
 }
 
 #pi-game .correct-digits {
@@ -253,8 +257,8 @@ em {
   padding: 1em;
 }
 
-#pi-game .next {
-  background-color: yellow;
+#pi-game .correct-digits:focus {
+  outline: none;
 }
 
 

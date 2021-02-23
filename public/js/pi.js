@@ -8,13 +8,12 @@ function main() {
     }
   };
 
-  var userAnswer = document.querySelector(".user-input");
   var piDisplay = document.querySelector(".correct-digits");
+  var userAnswer = document.querySelector(".correct-digits .user-input");
   var currentDigit = document.querySelector(".correct-digits .current");
-  var nextDigit = document.querySelector(".correct-digits .next");
   var PI = piDisplay.dataset.pi;
   var counter = 2;
-  var blinkOn = false;
+  var blinkOn = true;
 
   userAnswer.addEventListener("input", function processInput(event) {
     if (String(userAnswer.value) === PI[counter++]) {
@@ -34,12 +33,21 @@ function main() {
     userAnswer.value = "";
   });
 
+  piDisplay.addEventListener("click", function (e) {
+    userAnswer.focus();
+  });
+
   setInterval(function () {
-    if (blinkOn) {
-      nextDigit.classList.add("next");
+    if (document.activeElement === userAnswer) {
+      if (blinkOn) {
+        userAnswer.style.backgroundColor = "yellow";
+      } else {
+        userAnswer.style.backgroundColor = "";
+      }
+      blinkOn = !blinkOn;
     } else {
-      nextDigit.classList.remove("next");
+      userAnswer.style.backgroundColor = "";
+      blinkOn = true;
     }
-    blinkOn = !blinkOn;
-  }, 800)
+  }, 500);
 }
